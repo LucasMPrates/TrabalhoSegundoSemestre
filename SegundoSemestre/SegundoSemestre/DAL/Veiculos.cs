@@ -261,6 +261,58 @@ namespace SegundoSemestre.DAL
             }
         }
 
+        public static void UpdateStatus(DTO.Veiculos veiculo)
+        {
+            NpgsqlConnection psqlConn = BLL.ConexaoBD.Conexao();
+
+            try
+            {
+                psqlConn.Open();
+
+                NpgsqlCommand cmd = new NpgsqlCommand(" update veiculos set status=@status where codigo=@codigo ", psqlConn);
+
+                cmd.Parameters.AddWithValue("@codigo", veiculo.codigo);
+                cmd.Parameters.AddWithValue("@status", veiculo.status);
+
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                psqlConn.Close();
+            }
+        }
+
+        public static void UpdateKM(DTO.Veiculos veiculo)
+        {
+            NpgsqlConnection psqlConn = BLL.ConexaoBD.Conexao();
+
+            try
+            {
+                psqlConn.Open();
+
+                NpgsqlCommand cmd = new NpgsqlCommand(" update veiculos set km=@km where codigo=@codigo ", psqlConn);
+
+                cmd.Parameters.AddWithValue("@codigo", veiculo.codigo);
+                cmd.Parameters.AddWithValue("@km", veiculo.km);
+
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                psqlConn.Close();
+            }
+        }
+
         public static DTO.Veiculos RetornaVeiculo(int codigo)
         {
             NpgsqlConnection psqlConn = BLL.ConexaoBD.Conexao();

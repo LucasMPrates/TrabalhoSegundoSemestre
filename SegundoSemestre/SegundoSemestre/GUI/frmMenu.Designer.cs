@@ -36,6 +36,8 @@
             this.cargosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equipamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.veiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnGaragem = new System.Windows.Forms.Button();
+            this.cmsGaragem = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsCadastros.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +45,7 @@
             // 
             this.btnCadastros.Location = new System.Drawing.Point(12, 12);
             this.btnCadastros.Name = "btnCadastros";
-            this.btnCadastros.Size = new System.Drawing.Size(133, 23);
+            this.btnCadastros.Size = new System.Drawing.Size(133, 87);
             this.btnCadastros.TabIndex = 0;
             this.btnCadastros.Text = "Cadastros";
             this.btnCadastros.UseVisualStyleBackColor = true;
@@ -58,48 +60,64 @@
             this.equipamentosToolStripMenuItem,
             this.veiculosToolStripMenuItem});
             this.cmsCadastros.Name = "cmsCadastros";
-            this.cmsCadastros.Size = new System.Drawing.Size(181, 136);
+            this.cmsCadastros.Size = new System.Drawing.Size(151, 114);
             // 
             // pessoasToolStripMenuItem
             // 
             this.pessoasToolStripMenuItem.Name = "pessoasToolStripMenuItem";
-            this.pessoasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pessoasToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.pessoasToolStripMenuItem.Text = "Pessoas";
             this.pessoasToolStripMenuItem.Click += new System.EventHandler(this.pessoasToolStripMenuItem_Click);
             // 
             // loginToolStripMenuItem
             // 
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
             // cargosToolStripMenuItem
             // 
             this.cargosToolStripMenuItem.Name = "cargosToolStripMenuItem";
-            this.cargosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cargosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.cargosToolStripMenuItem.Text = "Cargos";
             this.cargosToolStripMenuItem.Click += new System.EventHandler(this.cargosToolStripMenuItem_Click);
             // 
             // equipamentosToolStripMenuItem
             // 
             this.equipamentosToolStripMenuItem.Name = "equipamentosToolStripMenuItem";
-            this.equipamentosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.equipamentosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.equipamentosToolStripMenuItem.Text = "Equipamentos";
             this.equipamentosToolStripMenuItem.Click += new System.EventHandler(this.equipamentosToolStripMenuItem_Click);
             // 
             // veiculosToolStripMenuItem
             // 
             this.veiculosToolStripMenuItem.Name = "veiculosToolStripMenuItem";
-            this.veiculosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.veiculosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.veiculosToolStripMenuItem.Text = "Veiculos";
             this.veiculosToolStripMenuItem.Click += new System.EventHandler(this.veiculosToolStripMenuItem_Click);
+            // 
+            // btnGaragem
+            // 
+            this.btnGaragem.Location = new System.Drawing.Point(151, 12);
+            this.btnGaragem.Name = "btnGaragem";
+            this.btnGaragem.Size = new System.Drawing.Size(133, 87);
+            this.btnGaragem.TabIndex = 1;
+            this.btnGaragem.Text = "Garagem";
+            this.btnGaragem.UseVisualStyleBackColor = true;
+            this.btnGaragem.Click += new System.EventHandler(this.btnGaragem_Click);
+            // 
+            // cmsGaragem
+            // 
+            this.cmsGaragem.Name = "cmsGaragem";
+            this.cmsGaragem.Size = new System.Drawing.Size(61, 4);
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 211);
+            this.Controls.Add(this.btnGaragem);
             this.Controls.Add(this.btnCadastros);
             this.MaximizeBox = false;
             this.Name = "frmMenu";
@@ -119,5 +137,7 @@
         private System.Windows.Forms.ToolStripMenuItem cargosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem equipamentosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem veiculosToolStripMenuItem;
+        private System.Windows.Forms.Button btnGaragem;
+        private System.Windows.Forms.ContextMenuStrip cmsGaragem;
     }
 }

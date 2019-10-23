@@ -100,5 +100,23 @@ namespace SegundoSemestre.GUI
                 MessageBox.Show(ex.Message,"", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnGaragem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //cmsGaragem.Show(btnGaragem, new System.Drawing.Point(0, 0));
+                frmGaragem frm = new frmGaragem();
+                frm.ShowDialog();
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message,"", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -77,6 +77,39 @@ namespace SegundoSemestre.DAL
             }
         }
 
+
+        public static DataTable RetornaMotoristas()
+        {
+            NpgsqlConnection psqlConn = SegundoSemestre.BLL.ConexaoBD.Conexao();
+
+            try
+            {
+                psqlConn.Open();
+
+                NpgsqlCommand cmd = new NpgsqlCommand(" SELECT codigo, nome " +
+                    " from pessoas where motorista = true ", psqlConn);
+
+
+
+
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+
+                DataTable dtab = new DataTable();
+
+                da.Fill(dtab);
+
+                return dtab;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                psqlConn.Close();
+            }
+        }
+
         public static DTO.Pessoas RetornaPessoa(int codigo)
         {
             NpgsqlConnection psqlConn = SegundoSemestre.BLL.ConexaoBD.Conexao();

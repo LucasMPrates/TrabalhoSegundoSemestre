@@ -58,10 +58,7 @@ namespace SegundoSemestre.GUI
                     DAL.Veiculos.Delete(Convert.ToInt32(dgvVeiculos.CurrentRow.Cells["codigo"].Value));
                     MessageBox.Show("Sucesso!","", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else
-                {
-
-                }
+                
             }
             catch (Exception ex)
             {
@@ -111,6 +108,21 @@ namespace SegundoSemestre.GUI
 
                 throw;
             }
+        }
+
+        private void mskPlaca_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvVeiculos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
