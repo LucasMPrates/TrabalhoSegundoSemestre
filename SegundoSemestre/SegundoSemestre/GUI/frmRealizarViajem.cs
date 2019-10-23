@@ -27,6 +27,8 @@ namespace SegundoSemestre.GUI
                 cboMotorista.DataSource = DAL.Pessoas.RetornaMotoristas();
                 cboMotorista.ValueMember = "codigo";
                 cboMotorista.DisplayMember = "nome";
+
+                txtVeiculo.Text = veiculo.modelo;
             }
             catch (Exception ex)
             {
@@ -59,7 +61,7 @@ namespace SegundoSemestre.GUI
 
                 DAL.Veiculos.UpdateStatus(veiculo);
 
-                MessageBox.Show("Sucesso!","", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Sucesso!","", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)

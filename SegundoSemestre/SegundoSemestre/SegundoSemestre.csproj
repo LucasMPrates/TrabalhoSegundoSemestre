@@ -84,12 +84,14 @@
     <Compile Include="DAL\Login.cs" />
     <Compile Include="DAL\Pessoas.cs" />
     <Compile Include="DAL\Veiculos.cs" />
+    <Compile Include="DAL\Veiculo_Pneus.cs" />
     <Compile Include="DAL\Viajens.cs" />
     <Compile Include="DTO\Cargos.cs" />
     <Compile Include="DTO\Equipamentos.cs" />
     <Compile Include="DTO\Login.cs" />
     <Compile Include="DTO\Pessoas.cs" />
     <Compile Include="DTO\Veiculos.cs" />
+    <Compile Include="DTO\Veiculo_Pneus.cs" />
     <Compile Include="DTO\Viajens.cs" />
     <Compile Include="GUI\frmCargosCadastro.cs">
       <SubType>Form</SubType>
@@ -163,6 +165,12 @@
     <Compile Include="GUI\frmSelecionaPessoa.Designer.cs">
       <DependentUpon>frmSelecionaPessoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmVeiculoPneus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmVeiculoPneus.Designer.cs">
+      <DependentUpon>frmVeiculoPneus.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmVeiculosCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmSelecionaPessoa.resx">
       <DependentUpon>frmSelecionaPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmVeiculoPneus.resx">
+      <DependentUpon>frmVeiculoPneus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmVeiculosCadastro.resx">
       <DependentUpon>frmVeiculosCadastro.cs</DependentUpon>

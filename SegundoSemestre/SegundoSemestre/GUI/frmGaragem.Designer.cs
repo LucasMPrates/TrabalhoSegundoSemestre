@@ -40,12 +40,14 @@
             this.km = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPneus = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeiculos)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnPneus);
             this.groupBox1.Controls.Add(this.btnViagem);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -150,6 +152,16 @@
             this.statusv.ReadOnly = true;
             this.statusv.Visible = false;
             // 
+            // btnPneus
+            // 
+            this.btnPneus.Location = new System.Drawing.Point(6, 46);
+            this.btnPneus.Name = "btnPneus";
+            this.btnPneus.Size = new System.Drawing.Size(126, 21);
+            this.btnPneus.TabIndex = 3;
+            this.btnPneus.Text = "Pneus";
+            this.btnPneus.UseVisualStyleBackColor = true;
+            this.btnPneus.Click += new System.EventHandler(this.btnPneus_Click);
+            // 
             // frmGaragem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -185,5 +197,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn km;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusv;
+        private System.Windows.Forms.Button btnPneus;
     }
 }

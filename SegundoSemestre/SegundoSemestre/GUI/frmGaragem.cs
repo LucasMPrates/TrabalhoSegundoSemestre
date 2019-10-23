@@ -66,8 +66,6 @@ namespace SegundoSemestre.GUI
                         dgvVeiculos.Rows[iIndex].Cells["status"].Style.ForeColor = Color.Red;
                     }
 
-                    
-
                 }
 
             }
@@ -98,6 +96,22 @@ namespace SegundoSemestre.GUI
                     frm.ShowDialog();
                 }
                 
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message,"", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnPneus_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DTO.Veiculos veiculo = DAL.Veiculos.RetornaVeiculo(Convert.ToInt32(dgvVeiculos.CurrentRow.Cells["codigo"].Value));
+                frmVeiculoPneus frm = new frmVeiculoPneus();
+                frm.veiculo = veiculo;
+                frm.ShowDialog();
             }
             catch (Exception ex)
             {

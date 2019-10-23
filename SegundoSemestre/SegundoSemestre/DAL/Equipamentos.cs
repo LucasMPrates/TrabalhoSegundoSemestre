@@ -135,6 +135,8 @@ namespace SegundoSemestre.DAL
             }
         }
 
+
+
         public static DataTable RetornaEquipamentos(string descricao, bool pneu, bool peca)
         {
             NpgsqlConnection psqlConn = BLL.ConexaoBD.Conexao();
@@ -168,6 +170,39 @@ namespace SegundoSemestre.DAL
                 psqlConn.Close();
             }
         }
+
+        public static DataTable RetornaPneus()
+        {
+            NpgsqlConnection psqlConn = BLL.ConexaoBD.Conexao();
+
+            try
+            {
+                DataTable dt = new DataTable();
+
+                psqlConn.Open();
+
+                NpgsqlCommand cmd = new NpgsqlCommand(" select * from equipamentos where pneu = true ", psqlConn);
+
+                
+
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+
+                da.Fill(dt);
+
+
+                return dt;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                psqlConn.Close();
+            }
+        }
+
+       
 
     }
 }
