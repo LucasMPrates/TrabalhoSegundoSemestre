@@ -172,5 +172,26 @@ namespace SegundoSemestre.GUI
                 MessageBox.Show(ex.Message,"", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnTrocarPneu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Convert.ToInt32(dgvPneus.CurrentRow.Cells["codigo"].Value) == 0) throw new Exception("Salve antes de trocar o pneu!");
+                if (Convert.ToBoolean(dgvPneus.CurrentRow.Cells["estepe"].Value) == false) throw new Exception("Esse pneu não é um estepe!");
+                frmTrocarPneu frm = new frmTrocarPneu();
+                int codigo = Convert.ToInt32(dgvPneus.CurrentRow.Cells["codigo"].Value);
+                frm.veiculo = veiculo;
+                frm.iCodigo = codigo;
+                frm.ShowDialog();
+                CarregarGrid();
+                
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message,"", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

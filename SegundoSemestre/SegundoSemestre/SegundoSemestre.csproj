@@ -84,6 +84,7 @@
     <Compile Include="DAL\Login.cs" />
     <Compile Include="DAL\Pessoas.cs" />
     <Compile Include="DAL\Veiculos.cs" />
+    <Compile Include="DAL\Veiculo_Abastecimentos.cs" />
     <Compile Include="DAL\Veiculo_Pneus.cs" />
     <Compile Include="DAL\Viajens.cs" />
     <Compile Include="DTO\Cargos.cs" />
@@ -91,13 +92,26 @@
     <Compile Include="DTO\Login.cs" />
     <Compile Include="DTO\Pessoas.cs" />
     <Compile Include="DTO\Veiculos.cs" />
+    <Compile Include="DTO\Veiculo_Abastecimentos.cs" />
     <Compile Include="DTO\Veiculo_Pneus.cs" />
     <Compile Include="DTO\Viajens.cs" />
+    <Compile Include="GUI\frmAbastecer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmAbastecer.Designer.cs">
+      <DependentUpon>frmAbastecer.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmCargosCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frmCargosCadastro.Designer.cs">
       <DependentUpon>frmCargosCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmCombustivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCombustivel.Designer.cs">
+      <DependentUpon>frmCombustivel.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmEquipamentosCadastro.cs">
       <SubType>Form</SubType>
@@ -165,6 +179,12 @@
     <Compile Include="GUI\frmSelecionaPessoa.Designer.cs">
       <DependentUpon>frmSelecionaPessoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmTrocarPneu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmTrocarPneu.Designer.cs">
+      <DependentUpon>frmTrocarPneu.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmVeiculoPneus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,10 +209,22 @@
     <Compile Include="GUI\frmRealizarViajem.Designer.cs">
       <DependentUpon>frmRealizarViajem.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmVisualizarImagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmVisualizarImagem.Designer.cs">
+      <DependentUpon>frmVisualizarImagem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frmAbastecer.resx">
+      <DependentUpon>frmAbastecer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmCargosCadastro.resx">
       <DependentUpon>frmCargosCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCombustivel.resx">
+      <DependentUpon>frmCombustivel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmEquipamentosCadastro.resx">
       <DependentUpon>frmEquipamentosCadastro.cs</DependentUpon>
@@ -227,6 +259,9 @@
     <EmbeddedResource Include="GUI\frmSelecionaPessoa.resx">
       <DependentUpon>frmSelecionaPessoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmTrocarPneu.resx">
+      <DependentUpon>frmTrocarPneu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmVeiculoPneus.resx">
       <DependentUpon>frmVeiculoPneus.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmRealizarViajem.resx">
       <DependentUpon>frmRealizarViajem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmVisualizarImagem.resx">
+      <DependentUpon>frmVisualizarImagem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

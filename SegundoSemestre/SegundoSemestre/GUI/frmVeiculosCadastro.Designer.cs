@@ -61,7 +61,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(138, 231);
-            this.groupBox1.TabIndex = 34;
+            this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             // 
             // btnNovo
@@ -69,7 +69,7 @@
             this.btnNovo.Location = new System.Drawing.Point(6, 15);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(126, 21);
-            this.btnNovo.TabIndex = 3;
+            this.btnNovo.TabIndex = 0;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
@@ -79,7 +79,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(6, 42);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(126, 21);
-            this.btnSalvar.TabIndex = 2;
+            this.btnSalvar.TabIndex = 1;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -180,21 +180,21 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigo.TabIndex = 45;
+            this.txtCodigo.TabIndex = 0;
             // 
             // txtMarca
             // 
             this.txtMarca.Location = new System.Drawing.Point(329, 69);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(120, 20);
-            this.txtMarca.TabIndex = 47;
+            this.txtMarca.TabIndex = 2;
             // 
             // txtModelo
             // 
             this.txtModelo.Location = new System.Drawing.Point(329, 88);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(121, 20);
-            this.txtModelo.TabIndex = 48;
+            this.txtModelo.TabIndex = 3;
             // 
             // cboTipoCombustivel
             // 
@@ -202,7 +202,7 @@
             this.cboTipoCombustivel.Location = new System.Drawing.Point(329, 107);
             this.cboTipoCombustivel.Name = "cboTipoCombustivel";
             this.cboTipoCombustivel.Size = new System.Drawing.Size(121, 21);
-            this.cboTipoCombustivel.TabIndex = 49;
+            this.cboTipoCombustivel.TabIndex = 4;
             // 
             // dtpAnoFabricacao
             // 
@@ -210,7 +210,7 @@
             this.dtpAnoFabricacao.Location = new System.Drawing.Point(329, 127);
             this.dtpAnoFabricacao.Name = "dtpAnoFabricacao";
             this.dtpAnoFabricacao.Size = new System.Drawing.Size(200, 20);
-            this.dtpAnoFabricacao.TabIndex = 50;
+            this.dtpAnoFabricacao.TabIndex = 5;
             // 
             // dtpAnoModelo
             // 
@@ -218,7 +218,7 @@
             this.dtpAnoModelo.Location = new System.Drawing.Point(329, 146);
             this.dtpAnoModelo.Name = "dtpAnoModelo";
             this.dtpAnoModelo.Size = new System.Drawing.Size(200, 20);
-            this.dtpAnoModelo.TabIndex = 51;
+            this.dtpAnoModelo.TabIndex = 6;
             // 
             // nupMediaConsumo
             // 
@@ -226,7 +226,7 @@
             this.nupMediaConsumo.Location = new System.Drawing.Point(329, 165);
             this.nupMediaConsumo.Name = "nupMediaConsumo";
             this.nupMediaConsumo.Size = new System.Drawing.Size(120, 20);
-            this.nupMediaConsumo.TabIndex = 52;
+            this.nupMediaConsumo.TabIndex = 7;
             // 
             // nupKm
             // 
@@ -238,7 +238,7 @@
             0});
             this.nupKm.Name = "nupKm";
             this.nupKm.Size = new System.Drawing.Size(120, 20);
-            this.nupKm.TabIndex = 53;
+            this.nupKm.TabIndex = 8;
             // 
             // mskPlaca
             // 
@@ -246,7 +246,7 @@
             this.mskPlaca.Mask = "AAA-0000";
             this.mskPlaca.Name = "mskPlaca";
             this.mskPlaca.Size = new System.Drawing.Size(100, 20);
-            this.mskPlaca.TabIndex = 54;
+            this.mskPlaca.TabIndex = 1;
             // 
             // frmVeiculos_Cadastro
             // 

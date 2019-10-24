@@ -95,7 +95,10 @@ namespace SegundoSemestre.GUI
                     frm.viagem = viagem;
                     frm.ShowDialog();
                 }
-                
+
+
+                CarregarGrid();
+
             }
             catch (Exception ex)
             {
@@ -112,6 +115,29 @@ namespace SegundoSemestre.GUI
                 frmVeiculoPneus frm = new frmVeiculoPneus();
                 frm.veiculo = veiculo;
                 frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message,"", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void frmGaragem_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCombustivel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                DTO.Veiculos veiculo = DAL.Veiculos.RetornaVeiculo(Convert.ToInt32(dgvVeiculos.CurrentRow.Cells["codigo"].Value));
+                frmCombustivel frm = new frmCombustivel();
+                frm.veiculo = veiculo;
+                frm.ShowDialog();
+                
             }
             catch (Exception ex)
             {

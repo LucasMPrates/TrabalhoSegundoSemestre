@@ -47,6 +47,7 @@
             this.estepe = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAtualizarSulcos = new System.Windows.Forms.Button();
+            this.btnTrocarPneu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPneus)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupSulcos)).BeginInit();
@@ -56,6 +57,8 @@
             // 
             this.dgvPneus.AllowUserToAddRows = false;
             this.dgvPneus.AllowUserToDeleteRows = false;
+            this.dgvPneus.AllowUserToResizeColumns = false;
+            this.dgvPneus.AllowUserToResizeRows = false;
             this.dgvPneus.BackgroundColor = System.Drawing.Color.White;
             this.dgvPneus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPneus.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -74,6 +77,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnTrocarPneu);
             this.groupBox1.Controls.Add(this.btnAtualizarSulcos);
             this.groupBox1.Controls.Add(this.btnExcluir);
             this.groupBox1.Controls.Add(this.btnSalvar);
@@ -212,7 +216,7 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(6, 100);
+            this.btnExcluir.Location = new System.Drawing.Point(6, 127);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(126, 21);
             this.btnExcluir.TabIndex = 4;
@@ -229,6 +233,16 @@
             this.btnAtualizarSulcos.Text = "Atualizar Sulcos";
             this.btnAtualizarSulcos.UseVisualStyleBackColor = true;
             this.btnAtualizarSulcos.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnTrocarPneu
+            // 
+            this.btnTrocarPneu.Location = new System.Drawing.Point(6, 100);
+            this.btnTrocarPneu.Name = "btnTrocarPneu";
+            this.btnTrocarPneu.Size = new System.Drawing.Size(126, 21);
+            this.btnTrocarPneu.TabIndex = 6;
+            this.btnTrocarPneu.Text = "Trocar Pneu";
+            this.btnTrocarPneu.UseVisualStyleBackColor = true;
+            this.btnTrocarPneu.Click += new System.EventHandler(this.btnTrocarPneu_Click);
             // 
             // frmVeiculoPneus
             // 
@@ -277,5 +291,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn estepe;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAtualizarSulcos;
+        private System.Windows.Forms.Button btnTrocarPneu;
     }
 }

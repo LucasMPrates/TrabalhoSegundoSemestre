@@ -72,6 +72,8 @@ namespace SegundoSemestre.GUI
                 txtModelo.Text = veiculo.modelo;
                 mskPlaca.Text = veiculo.placa;
 
+                cboTipoCombustivel.SelectedValue = veiculo.tpcomb;
+
                 dtpAnoFabricacao.Value =  new DateTime(veiculo.ano_fabricacao,1,1);
                 dtpAnoModelo.Value = new DateTime(veiculo.ano_modelo,1,1);
 
@@ -122,6 +124,7 @@ namespace SegundoSemestre.GUI
                 veiculo.ano_modelo = dtpAnoModelo.Value.Year;
                 veiculo.km = Convert.ToInt32(nupKm.Value);
                 veiculo.media_consumo = Convert.ToDouble(nupMediaConsumo.Value);
+                veiculo.tpcomb = cboTipoCombustivel.SelectedValue.ToString();
             }
             catch (Exception)
             {

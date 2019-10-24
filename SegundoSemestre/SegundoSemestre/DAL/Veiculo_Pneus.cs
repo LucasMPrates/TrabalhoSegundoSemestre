@@ -100,6 +100,33 @@ namespace SegundoSemestre.DAL
             }
         }
 
+
+        public static void TrocarPneu(int codigo, int pneu)
+        {
+            NpgsqlConnection psqlConn = SegundoSemestre.BLL.ConexaoBD.Conexao();
+
+            try
+            {
+                psqlConn.Open();
+
+                NpgsqlCommand cmd = new NpgsqlCommand(" delete from veiculo_pneus where codigo=@codigo", psqlConn);
+                cmd.Parameters.AddWithValue("@codigo", codigo);
+                cmd.ExecuteNonQuery();
+
+                NpgsqlCommand cmd2 = new NpgsqlCommand("update veiculo_pneus set estepe = false where codigo = @pneu", psqlConn);
+                cmd2.Parameters.AddWithValue("@pneu", pneu);
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                psqlConn.Close();
+            }
+        }
+
         public static void UpdateSulcos(int codigo ,double sulco)
         {
             NpgsqlConnection psqlConn = SegundoSemestre.BLL.ConexaoBD.Conexao();
@@ -136,6 +163,39 @@ namespace SegundoSemestre.DAL
                 psqlConn.Open();
 
                 NpgsqlCommand cmd = new NpgsqlCommand(" select * from veiculo_pneus where veiculo=@veiculo", psqlConn);
+
+                cmd.Parameters.AddWithValue("@veiculo", veiculo);
+
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+
+                da.Fill(dt);
+
+                return dt;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                psqlConn.Close();
+            }
+        }
+
+        public static DataTable RetornaPneusTrocar(int veiculo)
+        {
+            NpgsqlConnection psqlConn = SegundoSemestre.BLL.ConexaoBD.Conexao();
+
+            try
+            {
+                DataTable dt = new DataTable();
+
+                psqlConn.Open();
+
+                NpgsqlCommand cmd = new NpgsqlCommand(" select v.codigo, e.descricao || ' - ' || v.km_rodados || ' KM RODADOS' as display from veiculo_pneus v " +
+                    " inner join equipamentos e on e.codigo=v.pneu " +
+                    " where v.veiculo=@veiculo and v.estepe = false ", psqlConn);
 
                 cmd.Parameters.AddWithValue("@veiculo", veiculo);
 

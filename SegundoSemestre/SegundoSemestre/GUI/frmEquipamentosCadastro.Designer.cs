@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnNovo = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
@@ -37,7 +38,6 @@
             this.radPneu = new System.Windows.Forms.RadioButton();
             this.radPeca = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnNovo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -49,15 +49,25 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(138, 151);
-            this.groupBox1.TabIndex = 33;
+            this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Location = new System.Drawing.Point(6, 15);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(126, 21);
+            this.btnNovo.TabIndex = 0;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnSalvar
             // 
             this.btnSalvar.Location = new System.Drawing.Point(6, 42);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(126, 21);
-            this.btnSalvar.TabIndex = 2;
+            this.btnSalvar.TabIndex = 1;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -68,14 +78,14 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigo.TabIndex = 34;
+            this.txtCodigo.TabIndex = 0;
             // 
             // txtDescricao
             // 
             this.txtDescricao.Location = new System.Drawing.Point(266, 51);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(354, 20);
-            this.txtDescricao.TabIndex = 37;
+            this.txtDescricao.TabIndex = 1;
             // 
             // label1
             // 
@@ -104,7 +114,7 @@
             this.radPneu.Location = new System.Drawing.Point(32, 19);
             this.radPneu.Name = "radPneu";
             this.radPneu.Size = new System.Drawing.Size(54, 17);
-            this.radPneu.TabIndex = 40;
+            this.radPneu.TabIndex = 0;
             this.radPneu.TabStop = true;
             this.radPneu.Text = "Pneu";
             this.radPneu.UseVisualStyleBackColor = true;
@@ -117,7 +127,7 @@
             this.radPeca.Location = new System.Drawing.Point(32, 42);
             this.radPeca.Name = "radPeca";
             this.radPeca.Size = new System.Drawing.Size(54, 17);
-            this.radPeca.TabIndex = 41;
+            this.radPeca.TabIndex = 1;
             this.radPeca.TabStop = true;
             this.radPeca.Text = "Peça";
             this.radPeca.UseVisualStyleBackColor = true;
@@ -129,18 +139,8 @@
             this.groupBox2.Location = new System.Drawing.Point(184, 77);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(436, 86);
-            this.groupBox2.TabIndex = 42;
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            // 
-            // btnNovo
-            // 
-            this.btnNovo.Location = new System.Drawing.Point(6, 15);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(126, 21);
-            this.btnNovo.TabIndex = 3;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // frmEquipamentosCadastro
             // 

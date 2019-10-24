@@ -38,8 +38,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radPneu = new System.Windows.Forms.RadioButton();
             this.radPeca = new System.Windows.Forms.RadioButton();
+            this.radPneu = new System.Windows.Forms.RadioButton();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquipamentos)).BeginInit();
@@ -91,6 +91,8 @@
             // 
             this.dgvEquipamentos.AllowUserToAddRows = false;
             this.dgvEquipamentos.AllowUserToDeleteRows = false;
+            this.dgvEquipamentos.AllowUserToResizeColumns = false;
+            this.dgvEquipamentos.AllowUserToResizeRows = false;
             this.dgvEquipamentos.BackgroundColor = System.Drawing.Color.White;
             this.dgvEquipamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEquipamentos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -144,17 +146,6 @@
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
             // 
-            // radPneu
-            // 
-            this.radPneu.AutoSize = true;
-            this.radPneu.Location = new System.Drawing.Point(9, 16);
-            this.radPneu.Name = "radPneu";
-            this.radPneu.Size = new System.Drawing.Size(50, 17);
-            this.radPneu.TabIndex = 0;
-            this.radPneu.TabStop = true;
-            this.radPneu.Text = "Pneu";
-            this.radPneu.UseVisualStyleBackColor = true;
-            // 
             // radPeca
             // 
             this.radPeca.AutoSize = true;
@@ -165,6 +156,17 @@
             this.radPeca.TabStop = true;
             this.radPeca.Text = "Peça";
             this.radPeca.UseVisualStyleBackColor = true;
+            // 
+            // radPneu
+            // 
+            this.radPneu.AutoSize = true;
+            this.radPneu.Location = new System.Drawing.Point(9, 16);
+            this.radPneu.Name = "radPneu";
+            this.radPneu.Size = new System.Drawing.Size(50, 17);
+            this.radPneu.TabIndex = 0;
+            this.radPneu.TabStop = true;
+            this.radPneu.Text = "Pneu";
+            this.radPneu.UseVisualStyleBackColor = true;
             // 
             // btnPesquisar
             // 

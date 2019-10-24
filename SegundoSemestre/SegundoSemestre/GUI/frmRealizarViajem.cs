@@ -62,6 +62,7 @@ namespace SegundoSemestre.GUI
                 DAL.Veiculos.UpdateStatus(veiculo);
 
                 MessageBox.Show("Sucesso!","", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
 
             }
             catch (Exception ex)

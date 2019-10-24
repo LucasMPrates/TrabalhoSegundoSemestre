@@ -44,6 +44,8 @@
             // 
             this.dgvLogins.AllowUserToAddRows = false;
             this.dgvLogins.AllowUserToDeleteRows = false;
+            this.dgvLogins.AllowUserToResizeColumns = false;
+            this.dgvLogins.AllowUserToResizeRows = false;
             this.dgvLogins.BackgroundColor = System.Drawing.Color.White;
             this.dgvLogins.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLogins.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

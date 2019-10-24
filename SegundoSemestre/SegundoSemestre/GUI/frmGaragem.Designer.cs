@@ -41,12 +41,14 @@
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnPneus = new System.Windows.Forms.Button();
+            this.btnCombustivel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeiculos)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnCombustivel);
             this.groupBox1.Controls.Add(this.btnPneus);
             this.groupBox1.Controls.Add(this.btnViagem);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -97,6 +99,8 @@
             // 
             this.dgvVeiculos.AllowUserToAddRows = false;
             this.dgvVeiculos.AllowUserToDeleteRows = false;
+            this.dgvVeiculos.AllowUserToResizeColumns = false;
+            this.dgvVeiculos.AllowUserToResizeRows = false;
             this.dgvVeiculos.BackgroundColor = System.Drawing.Color.White;
             this.dgvVeiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVeiculos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -162,6 +166,16 @@
             this.btnPneus.UseVisualStyleBackColor = true;
             this.btnPneus.Click += new System.EventHandler(this.btnPneus_Click);
             // 
+            // btnCombustivel
+            // 
+            this.btnCombustivel.Location = new System.Drawing.Point(6, 73);
+            this.btnCombustivel.Name = "btnCombustivel";
+            this.btnCombustivel.Size = new System.Drawing.Size(126, 21);
+            this.btnCombustivel.TabIndex = 4;
+            this.btnCombustivel.Text = "Combustível";
+            this.btnCombustivel.UseVisualStyleBackColor = true;
+            this.btnCombustivel.Click += new System.EventHandler(this.btnCombustivel_Click);
+            // 
             // frmGaragem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,6 +190,7 @@
             this.Name = "frmGaragem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Garagem";
+            this.Load += new System.EventHandler(this.frmGaragem_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeiculos)).EndInit();
             this.ResumeLayout(false);
@@ -198,5 +213,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusv;
         private System.Windows.Forms.Button btnPneus;
+        private System.Windows.Forms.Button btnCombustivel;
     }
 }

@@ -89,6 +89,8 @@
             // 
             this.dgvVeiculos.AllowUserToAddRows = false;
             this.dgvVeiculos.AllowUserToDeleteRows = false;
+            this.dgvVeiculos.AllowUserToResizeColumns = false;
+            this.dgvVeiculos.AllowUserToResizeRows = false;
             this.dgvVeiculos.BackgroundColor = System.Drawing.Color.White;
             this.dgvVeiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVeiculos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
