@@ -145,5 +145,21 @@ namespace SegundoSemestre.GUI
                 MessageBox.Show(ex.Message,"", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnManutenções_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DTO.Veiculos veiculo = DAL.Veiculos.RetornaVeiculo(Convert.ToInt32(dgvVeiculos.CurrentRow.Cells["codigo"].Value));
+                frmVeiculoManutencoes frm = new frmVeiculoManutencoes();
+                frm.veiculo = veiculo;
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message,"", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

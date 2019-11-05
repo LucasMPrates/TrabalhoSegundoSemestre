@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCombustivel = new System.Windows.Forms.Button();
+            this.btnPneus = new System.Windows.Forms.Button();
             this.btnViagem = new System.Windows.Forms.Button();
             this.mskPlaca = new System.Windows.Forms.MaskedTextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
@@ -40,14 +42,14 @@
             this.km = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnPneus = new System.Windows.Forms.Button();
-            this.btnCombustivel = new System.Windows.Forms.Button();
+            this.btnManutenções = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeiculos)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnManutenções);
             this.groupBox1.Controls.Add(this.btnCombustivel);
             this.groupBox1.Controls.Add(this.btnPneus);
             this.groupBox1.Controls.Add(this.btnViagem);
@@ -56,6 +58,26 @@
             this.groupBox1.Size = new System.Drawing.Size(138, 274);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
+            // 
+            // btnCombustivel
+            // 
+            this.btnCombustivel.Location = new System.Drawing.Point(6, 73);
+            this.btnCombustivel.Name = "btnCombustivel";
+            this.btnCombustivel.Size = new System.Drawing.Size(126, 21);
+            this.btnCombustivel.TabIndex = 4;
+            this.btnCombustivel.Text = "Combustível";
+            this.btnCombustivel.UseVisualStyleBackColor = true;
+            this.btnCombustivel.Click += new System.EventHandler(this.btnCombustivel_Click);
+            // 
+            // btnPneus
+            // 
+            this.btnPneus.Location = new System.Drawing.Point(6, 46);
+            this.btnPneus.Name = "btnPneus";
+            this.btnPneus.Size = new System.Drawing.Size(126, 21);
+            this.btnPneus.TabIndex = 3;
+            this.btnPneus.Text = "Pneus";
+            this.btnPneus.UseVisualStyleBackColor = true;
+            this.btnPneus.Click += new System.EventHandler(this.btnPneus_Click);
             // 
             // btnViagem
             // 
@@ -156,25 +178,15 @@
             this.statusv.ReadOnly = true;
             this.statusv.Visible = false;
             // 
-            // btnPneus
+            // btnManutenções
             // 
-            this.btnPneus.Location = new System.Drawing.Point(6, 46);
-            this.btnPneus.Name = "btnPneus";
-            this.btnPneus.Size = new System.Drawing.Size(126, 21);
-            this.btnPneus.TabIndex = 3;
-            this.btnPneus.Text = "Pneus";
-            this.btnPneus.UseVisualStyleBackColor = true;
-            this.btnPneus.Click += new System.EventHandler(this.btnPneus_Click);
-            // 
-            // btnCombustivel
-            // 
-            this.btnCombustivel.Location = new System.Drawing.Point(6, 73);
-            this.btnCombustivel.Name = "btnCombustivel";
-            this.btnCombustivel.Size = new System.Drawing.Size(126, 21);
-            this.btnCombustivel.TabIndex = 4;
-            this.btnCombustivel.Text = "Combustível";
-            this.btnCombustivel.UseVisualStyleBackColor = true;
-            this.btnCombustivel.Click += new System.EventHandler(this.btnCombustivel_Click);
+            this.btnManutenções.Location = new System.Drawing.Point(6, 100);
+            this.btnManutenções.Name = "btnManutenções";
+            this.btnManutenções.Size = new System.Drawing.Size(126, 21);
+            this.btnManutenções.TabIndex = 5;
+            this.btnManutenções.Text = "Manutenções";
+            this.btnManutenções.UseVisualStyleBackColor = true;
+            this.btnManutenções.Click += new System.EventHandler(this.btnManutenções_Click);
             // 
             // frmGaragem
             // 
@@ -214,5 +226,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statusv;
         private System.Windows.Forms.Button btnPneus;
         private System.Windows.Forms.Button btnCombustivel;
+        private System.Windows.Forms.Button btnManutenções;
     }
 }

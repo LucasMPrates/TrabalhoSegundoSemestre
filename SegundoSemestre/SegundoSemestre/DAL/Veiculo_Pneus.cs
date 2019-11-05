@@ -83,7 +83,7 @@ namespace SegundoSemestre.DAL
             {
                 psqlConn.Open();
 
-                NpgsqlCommand cmd = new NpgsqlCommand(" update  veiculo_pneus set km_rodados=@km_rodados where veiculo=@veiculo and estepe = false ", psqlConn);
+                NpgsqlCommand cmd = new NpgsqlCommand(" update  veiculo_pneus set km_rodados= km_rodados + @km_rodados where veiculo=@veiculo and estepe = false ", psqlConn);
 
                 cmd.Parameters.AddWithValue("@veiculo", veiculo);
                 cmd.Parameters.AddWithValue("@km_rodados", km);

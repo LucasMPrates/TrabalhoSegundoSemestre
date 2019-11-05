@@ -33,6 +33,7 @@ namespace SegundoSemestre.GUI
                 DAL.Veiculos.UpdateStatus(veiculo);
                 DAL.Veiculos.UpdateKM(veiculo);
                 DAL.Veiculo_Pneus.UpdateKM(veiculo.codigo, viagem.km_rodados);
+                DAL.Veiculo_Manutencoes.UpdateKM(veiculo.codigo, viagem.km_rodados);
                 MessageBox.Show("Sucesso!","", MessageBoxButtons.OK, MessageBoxIcon.Information );
                 this.Close();
             }
