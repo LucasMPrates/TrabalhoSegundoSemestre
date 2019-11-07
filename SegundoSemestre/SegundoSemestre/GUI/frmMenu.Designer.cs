@@ -45,7 +45,7 @@
             // 
             this.btnCadastros.Location = new System.Drawing.Point(12, 12);
             this.btnCadastros.Name = "btnCadastros";
-            this.btnCadastros.Size = new System.Drawing.Size(133, 87);
+            this.btnCadastros.Size = new System.Drawing.Size(294, 87);
             this.btnCadastros.TabIndex = 0;
             this.btnCadastros.Text = "Cadastros";
             this.btnCadastros.UseVisualStyleBackColor = true;
@@ -99,9 +99,9 @@
             // 
             // btnGaragem
             // 
-            this.btnGaragem.Location = new System.Drawing.Point(151, 12);
+            this.btnGaragem.Location = new System.Drawing.Point(12, 112);
             this.btnGaragem.Name = "btnGaragem";
-            this.btnGaragem.Size = new System.Drawing.Size(133, 87);
+            this.btnGaragem.Size = new System.Drawing.Size(294, 87);
             this.btnGaragem.TabIndex = 1;
             this.btnGaragem.Text = "Garagem";
             this.btnGaragem.UseVisualStyleBackColor = true;
@@ -116,7 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 211);
+            this.ClientSize = new System.Drawing.Size(327, 211);
             this.Controls.Add(this.btnGaragem);
             this.Controls.Add(this.btnCadastros);
             this.MaximizeBox = false;

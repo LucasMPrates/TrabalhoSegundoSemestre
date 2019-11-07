@@ -70,12 +70,12 @@ namespace SegundoSemestre.GUI
                         drow.Cells["codigo"].Value = manutencao.codigo;
                         
                     }
-                    MessageBox.Show("Sucesso!","", MessageBoxButtons.OK, MessageBoxIcon.Information );
+                    
 
 
 
                 }
-                       
+                MessageBox.Show("Sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)

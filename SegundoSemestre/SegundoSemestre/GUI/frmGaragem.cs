@@ -161,5 +161,21 @@ namespace SegundoSemestre.GUI
                 MessageBox.Show(ex.Message,"", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnPecas_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DTO.Veiculos veiculo = DAL.Veiculos.RetornaVeiculo(Convert.ToInt32(dgvVeiculos.CurrentRow.Cells["codigo"].Value));
+                frmTrocaPecas frm = new frmTrocaPecas();
+                frm.veiculo = veiculo;
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message,"", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

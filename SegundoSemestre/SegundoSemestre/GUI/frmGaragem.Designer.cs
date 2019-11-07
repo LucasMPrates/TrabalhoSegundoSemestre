@@ -43,12 +43,14 @@
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnManutenções = new System.Windows.Forms.Button();
+            this.btnPecas = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeiculos)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnPecas);
             this.groupBox1.Controls.Add(this.btnManutenções);
             this.groupBox1.Controls.Add(this.btnCombustivel);
             this.groupBox1.Controls.Add(this.btnPneus);
@@ -188,6 +190,16 @@
             this.btnManutenções.UseVisualStyleBackColor = true;
             this.btnManutenções.Click += new System.EventHandler(this.btnManutenções_Click);
             // 
+            // btnPecas
+            // 
+            this.btnPecas.Location = new System.Drawing.Point(6, 127);
+            this.btnPecas.Name = "btnPecas";
+            this.btnPecas.Size = new System.Drawing.Size(126, 21);
+            this.btnPecas.TabIndex = 6;
+            this.btnPecas.Text = "Troca de Peças";
+            this.btnPecas.UseVisualStyleBackColor = true;
+            this.btnPecas.Click += new System.EventHandler(this.btnPecas_Click);
+            // 
             // frmGaragem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,5 +239,6 @@
         private System.Windows.Forms.Button btnPneus;
         private System.Windows.Forms.Button btnCombustivel;
         private System.Windows.Forms.Button btnManutenções;
+        private System.Windows.Forms.Button btnPecas;
     }
 }

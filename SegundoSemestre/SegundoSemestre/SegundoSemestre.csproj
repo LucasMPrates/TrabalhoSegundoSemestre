@@ -86,6 +86,7 @@
     <Compile Include="DAL\Veiculos.cs" />
     <Compile Include="DAL\Veiculo_Abastecimentos.cs" />
     <Compile Include="DAL\Veiculo_Manutencoes.cs" />
+    <Compile Include="DAL\Veiculo_Pecas.cs" />
     <Compile Include="DAL\Veiculo_Pneus.cs" />
     <Compile Include="DAL\Viajens.cs" />
     <Compile Include="DTO\Cargos.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="DTO\Veiculos.cs" />
     <Compile Include="DTO\Veiculo_Abastecimentos.cs" />
     <Compile Include="DTO\Veiculo_Manutencoes.cs" />
+    <Compile Include="DTO\Veiculo_Pecas.cs" />
     <Compile Include="DTO\Veiculo_Pneus.cs" />
     <Compile Include="DTO\Viajens.cs" />
     <Compile Include="GUI\frmAbastecer.cs">
@@ -181,6 +183,12 @@
     <Compile Include="GUI\frmSelecionaPessoa.Designer.cs">
       <DependentUpon>frmSelecionaPessoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmTrocaPecas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmTrocaPecas.Designer.cs">
+      <DependentUpon>frmTrocaPecas.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmTrocarPneu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmSelecionaPessoa.resx">
       <DependentUpon>frmSelecionaPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmTrocaPecas.resx">
+      <DependentUpon>frmTrocaPecas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmTrocarPneu.resx">
       <DependentUpon>frmTrocarPneu.cs</DependentUpon>

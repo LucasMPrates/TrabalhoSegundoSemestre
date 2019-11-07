@@ -202,7 +202,38 @@ namespace SegundoSemestre.DAL
             }
         }
 
-       
+        public static DataTable RetornaPecas()
+        {
+            NpgsqlConnection psqlConn = BLL.ConexaoBD.Conexao();
+
+            try
+            {
+                DataTable dt = new DataTable();
+
+                psqlConn.Open();
+
+                NpgsqlCommand cmd = new NpgsqlCommand(" select codigo, descricao from equipamentos where peca = true ", psqlConn);
+
+
+
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+
+                da.Fill(dt);
+
+
+                return dt;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                psqlConn.Close();
+            }
+        }
+
+
 
     }
 }
