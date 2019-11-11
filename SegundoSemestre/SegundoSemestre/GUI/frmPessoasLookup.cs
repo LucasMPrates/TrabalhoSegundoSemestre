@@ -149,5 +149,21 @@ namespace SegundoSemestre.GUI
                 MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnAnexos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int codigo = Convert.ToInt32(dgvPessoas.CurrentRow.Cells["codigo"].Value);
+                frmPessoasAnexo frm = new frmPessoasAnexo();
+                frm.pessoa = DAL.Pessoas.RetornaPessoa(codigo);
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

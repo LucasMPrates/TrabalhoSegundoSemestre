@@ -124,5 +124,20 @@ namespace SegundoSemestre.GUI
         {
 
         }
+
+        private void btnAnexos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmVeiculo_Anexos frm = new frmVeiculo_Anexos();
+                frm.veiculo = DAL.Veiculos.RetornaVeiculo(Convert.ToInt32(dgvVeiculos.CurrentRow.Cells["codigo"].Value));
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message,"", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

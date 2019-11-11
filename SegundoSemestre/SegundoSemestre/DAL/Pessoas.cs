@@ -10,6 +10,43 @@ namespace SegundoSemestre.DAL
 {
     public class Pessoas
     {
+
+        public static byte[] RetornaArquivo(int codigo)
+        {
+            NpgsqlConnection psqlConn = BLL.ConexaoBD.Conexao();
+
+            try
+            {
+
+                psqlConn.Open();
+
+                NpgsqlCommand cmd = new NpgsqlCommand(" select imagem " +
+                                                        " from pessoa_anexos " +
+                                                        " where codigo=@codigo::int ", psqlConn);
+
+                cmd.Parameters.AddWithValue("@codigo", codigo);
+
+                NpgsqlDataReader dr = cmd.ExecuteReader();
+
+                byte[] arquivo = null;
+
+                while (dr.Read())
+                {
+                    if (dr["imagem"] != DBNull.Value) arquivo = dr["imagem"] as byte[];
+                }
+
+                return arquivo;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                psqlConn.Close();
+            }
+        }
+
         public static DataTable RetornaPessoas(string cpf , string nome)
         {
             NpgsqlConnection psqlConn = SegundoSemestre.BLL.ConexaoBD.Conexao();
@@ -44,6 +81,76 @@ namespace SegundoSemestre.DAL
             }
         }
 
+        public static DataTable RetornaAnexos(int pessoa)
+        {
+            NpgsqlConnection psqlConn = SegundoSemestre.BLL.ConexaoBD.Conexao();
+
+            try
+            {
+                psqlConn.Open();
+
+                NpgsqlCommand cmd = new NpgsqlCommand(" SELECT * from pessoa_anexos where pessoa=@pessoa ", psqlConn);
+
+
+                cmd.Parameters.AddWithValue("@pessoa", pessoa);
+               
+
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+
+                DataTable dtab = new DataTable();
+
+                da.Fill(dtab);
+
+                return dtab;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                psqlConn.Close();
+            }
+        }
+
+        public static void InsertAnexos(DTO.Pessoa_Anexos anexo)
+        {
+            NpgsqlConnection psqlConn = BLL.ConexaoBD.Conexao();
+
+            try
+            {
+
+                psqlConn.Open();
+
+                NpgsqlCommand cmd = new NpgsqlCommand(" insert into pessoa_anexos " +
+                                                        " (descricao,imagem,pessoa) values " +
+                                                        " (@descricao,@imagem,@pessoa) returning codigo", psqlConn);
+
+                cmd.Parameters.AddWithValue("@descricao", anexo.descricao);
+                cmd.Parameters.AddWithValue("@imagem", anexo.imagem);
+                cmd.Parameters.AddWithValue("@pessoa", anexo.pessoa);
+
+
+                NpgsqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    if (dr["codigo"] != DBNull.Value) anexo.codigo = Convert.ToInt32(dr["codigo"]);
+                }
+
+
+
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                psqlConn.Close();
+            }
+        }
 
         public static DataTable RetornaPessoas()
         {
@@ -386,6 +493,30 @@ namespace SegundoSemestre.DAL
 
                 cmd.Parameters.AddWithValue("@codigo", codigo);
             
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                psqlConn.Close();
+            }
+        }
+
+        public static void DeleteAnexo(int codigo)
+        {
+            NpgsqlConnection psqlConn = BLL.ConexaoBD.Conexao();
+
+            try
+            {
+                psqlConn.Open();
+
+                NpgsqlCommand cmd = new NpgsqlCommand(" delete from pessoa_anexos where codigo=@codigo ", psqlConn);
+
+                cmd.Parameters.AddWithValue("@codigo", codigo);
+
                 cmd.ExecuteNonQuery();
             }
             catch (Exception)

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAnexos = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAbrir = new System.Windows.Forms.Button();
@@ -46,6 +47,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnAnexos);
             this.groupBox1.Controls.Add(this.btnNovo);
             this.groupBox1.Controls.Add(this.btnExcluir);
             this.groupBox1.Controls.Add(this.btnAbrir);
@@ -54,6 +56,16 @@
             this.groupBox1.Size = new System.Drawing.Size(138, 274);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
+            // 
+            // btnAnexos
+            // 
+            this.btnAnexos.Location = new System.Drawing.Point(6, 75);
+            this.btnAnexos.Name = "btnAnexos";
+            this.btnAnexos.Size = new System.Drawing.Size(126, 21);
+            this.btnAnexos.TabIndex = 3;
+            this.btnAnexos.Text = "Anexos";
+            this.btnAnexos.UseVisualStyleBackColor = true;
+            this.btnAnexos.Click += new System.EventHandler(this.btnAnexos_Click);
             // 
             // btnNovo
             // 
@@ -67,7 +79,7 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(6, 77);
+            this.btnExcluir.Location = new System.Drawing.Point(6, 102);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(126, 21);
             this.btnExcluir.TabIndex = 1;
@@ -197,5 +209,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.MaskedTextBox mskPlaca;
+        private System.Windows.Forms.Button btnAnexos;
     }
 }

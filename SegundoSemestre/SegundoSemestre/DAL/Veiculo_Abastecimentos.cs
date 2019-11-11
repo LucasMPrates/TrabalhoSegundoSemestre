@@ -76,6 +76,36 @@ namespace SegundoSemestre.DAL
             }
         }
 
+        public static DataSet RetornaAbastecimentosReport(int veiculo)
+        {
+            NpgsqlConnection psqlConn = BLL.ConexaoBD.Conexao();
+
+            try
+            {
+                DataSet dt = new DataSet();
+                psqlConn.Open();
+
+                NpgsqlCommand cmd = new NpgsqlCommand(" select * " +
+                                                        " from veiculo_abastecimentos " +
+                                                        " where veiculo = @veiculo ", psqlConn);
+
+                cmd.Parameters.AddWithValue("@veiculo", veiculo);
+
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+                da.Fill(dt);
+
+                return dt;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                psqlConn.Close();
+            }
+        }
+
         public static void Insert(DTO.Veiculo_Abastecimentos abastecimento)
         {
             NpgsqlConnection psqlConn = BLL.ConexaoBD.Conexao();

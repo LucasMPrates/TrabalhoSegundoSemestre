@@ -109,5 +109,18 @@ namespace SegundoSemestre.GUI
             }
         }
 
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+               
+            
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message,"", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

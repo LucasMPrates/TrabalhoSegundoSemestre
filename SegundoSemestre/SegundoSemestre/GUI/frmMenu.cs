@@ -118,5 +118,53 @@ namespace SegundoSemestre.GUI
                 MessageBox.Show(ex.Message,"", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnRelatórios_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                cmsRelatórios.Show(btnRelatórios, new System.Drawing.Point(0, 0));
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message,"", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void abastecimentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmRPT frm = new frmRPT();
+                frm.caminho = @"C:\Users\lucas\Source\Repos\LucasMPrates\TrabalhoSegundoSemestre\SegundoSemestre\SegundoSemestre\Reports\CrystalReport1.rpt";
+                
+
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void viajensToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmRPT frm = new frmRPT();
+                frm.caminho = @"C:\Users\lucas\Source\Repos\LucasMPrates\TrabalhoSegundoSemestre\SegundoSemestre\SegundoSemestre\Reports\rptViajens.rpt";
+
+
+                frm.ShowDialog();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message,"", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

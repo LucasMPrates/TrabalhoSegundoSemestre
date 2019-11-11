@@ -41,12 +41,14 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnAnexos = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPessoas)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnAnexos);
             this.groupBox1.Controls.Add(this.btnNovo);
             this.groupBox1.Controls.Add(this.btnExcluir);
             this.groupBox1.Controls.Add(this.btnAbrir);
@@ -68,7 +70,7 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(6, 77);
+            this.btnExcluir.Location = new System.Drawing.Point(6, 102);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(126, 21);
             this.btnExcluir.TabIndex = 1;
@@ -171,6 +173,16 @@
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click_1);
             // 
+            // btnAnexos
+            // 
+            this.btnAnexos.Location = new System.Drawing.Point(6, 75);
+            this.btnAnexos.Name = "btnAnexos";
+            this.btnAnexos.Size = new System.Drawing.Size(126, 21);
+            this.btnAnexos.TabIndex = 3;
+            this.btnAnexos.Text = "Anexos";
+            this.btnAnexos.UseVisualStyleBackColor = true;
+            this.btnAnexos.Click += new System.EventHandler(this.btnAnexos_Click);
+            // 
             // frmPessoasLookup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,5 +222,6 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.Button btnAnexos;
     }
 }

@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Interop.ADOX">
+      <HintPath>..\..\..\..\..\..\..\..\BtaSolutions\DMA\DMA\obj\Debug\Interop.ADOX.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -66,6 +75,8 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -83,6 +94,7 @@
     <Compile Include="DAL\Equipamentos.cs" />
     <Compile Include="DAL\Login.cs" />
     <Compile Include="DAL\Pessoas.cs" />
+    <Compile Include="DAL\Report.cs" />
     <Compile Include="DAL\Veiculos.cs" />
     <Compile Include="DAL\Veiculo_Abastecimentos.cs" />
     <Compile Include="DAL\Veiculo_Manutencoes.cs" />
@@ -93,8 +105,11 @@
     <Compile Include="DTO\Equipamentos.cs" />
     <Compile Include="DTO\Login.cs" />
     <Compile Include="DTO\Pessoas.cs" />
+    <Compile Include="DTO\Pessoa_Anexos.cs" />
+    <Compile Include="DTO\Report.cs" />
     <Compile Include="DTO\Veiculos.cs" />
     <Compile Include="DTO\Veiculo_Abastecimentos.cs" />
+    <Compile Include="DTO\Veiculo_Anexos.cs" />
     <Compile Include="DTO\Veiculo_Manutencoes.cs" />
     <Compile Include="DTO\Veiculo_Pecas.cs" />
     <Compile Include="DTO\Veiculo_Pneus.cs" />
@@ -165,6 +180,12 @@
     <Compile Include="GUI\frmPessoas.Designer.cs">
       <DependentUpon>frmPessoas.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmPessoasAnexo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmPessoasAnexo.Designer.cs">
+      <DependentUpon>frmPessoasAnexo.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmPessoasLookup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +197,12 @@
     </Compile>
     <Compile Include="GUI\frmRetornoViagem.Designer.cs">
       <DependentUpon>frmRetornoViagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmRPT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmRPT.Designer.cs">
+      <DependentUpon>frmRPT.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmSelecionaPessoa.cs">
       <SubType>Form</SubType>
@@ -225,6 +252,12 @@
     <Compile Include="GUI\frmRealizarViajem.Designer.cs">
       <DependentUpon>frmRealizarViajem.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmVeiculo_Anexos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmVeiculo_Anexos.Designer.cs">
+      <DependentUpon>frmVeiculo_Anexos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmVisualizarImagem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +266,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\rptViajens.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptViajens.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <EmbeddedResource Include="GUI\frmAbastecer.resx">
       <DependentUpon>frmAbastecer.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,11 +313,17 @@
     <EmbeddedResource Include="GUI\frmPessoas.resx">
       <DependentUpon>frmPessoas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmPessoasAnexo.resx">
+      <DependentUpon>frmPessoasAnexo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmPessoasLookup.resx">
       <DependentUpon>frmPessoasLookup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmRetornoViagem.resx">
       <DependentUpon>frmRetornoViagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmRPT.resx">
+      <DependentUpon>frmRPT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmSelecionaPessoa.resx">
       <DependentUpon>frmSelecionaPessoa.cs</DependentUpon>
@@ -296,6 +349,9 @@
     <EmbeddedResource Include="GUI\frmRealizarViajem.resx">
       <DependentUpon>frmRealizarViajem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmVeiculo_Anexos.resx">
+      <DependentUpon>frmVeiculo_Anexos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmVisualizarImagem.resx">
       <DependentUpon>frmVisualizarImagem.cs</DependentUpon>
     </EmbeddedResource>
@@ -308,6 +364,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Content Include="Reports\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\rptViajens.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptViajens.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -321,6 +387,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -38,7 +38,12 @@
             this.veiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnGaragem = new System.Windows.Forms.Button();
             this.cmsGaragem = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnRelatórios = new System.Windows.Forms.Button();
+            this.cmsRelatórios = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.abastecimentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viajensToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsCadastros.SuspendLayout();
+            this.cmsRelatórios.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCadastros
@@ -99,7 +104,7 @@
             // 
             // btnGaragem
             // 
-            this.btnGaragem.Location = new System.Drawing.Point(12, 112);
+            this.btnGaragem.Location = new System.Drawing.Point(12, 108);
             this.btnGaragem.Name = "btnGaragem";
             this.btnGaragem.Size = new System.Drawing.Size(294, 87);
             this.btnGaragem.TabIndex = 1;
@@ -112,11 +117,44 @@
             this.cmsGaragem.Name = "cmsGaragem";
             this.cmsGaragem.Size = new System.Drawing.Size(61, 4);
             // 
+            // btnRelatórios
+            // 
+            this.btnRelatórios.Location = new System.Drawing.Point(12, 204);
+            this.btnRelatórios.Name = "btnRelatórios";
+            this.btnRelatórios.Size = new System.Drawing.Size(294, 87);
+            this.btnRelatórios.TabIndex = 2;
+            this.btnRelatórios.Text = "Relatórios";
+            this.btnRelatórios.UseVisualStyleBackColor = true;
+            this.btnRelatórios.Click += new System.EventHandler(this.btnRelatórios_Click);
+            // 
+            // cmsRelatórios
+            // 
+            this.cmsRelatórios.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.abastecimentosToolStripMenuItem,
+            this.viajensToolStripMenuItem});
+            this.cmsRelatórios.Name = "cmsRelatórios";
+            this.cmsRelatórios.Size = new System.Drawing.Size(160, 48);
+            // 
+            // abastecimentosToolStripMenuItem
+            // 
+            this.abastecimentosToolStripMenuItem.Name = "abastecimentosToolStripMenuItem";
+            this.abastecimentosToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.abastecimentosToolStripMenuItem.Text = "Abastecimentos";
+            this.abastecimentosToolStripMenuItem.Click += new System.EventHandler(this.abastecimentosToolStripMenuItem_Click);
+            // 
+            // viajensToolStripMenuItem
+            // 
+            this.viajensToolStripMenuItem.Name = "viajensToolStripMenuItem";
+            this.viajensToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.viajensToolStripMenuItem.Text = "Viajens";
+            this.viajensToolStripMenuItem.Click += new System.EventHandler(this.viajensToolStripMenuItem_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 211);
+            this.ClientSize = new System.Drawing.Size(323, 306);
+            this.Controls.Add(this.btnRelatórios);
             this.Controls.Add(this.btnGaragem);
             this.Controls.Add(this.btnCadastros);
             this.MaximizeBox = false;
@@ -124,6 +162,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.cmsCadastros.ResumeLayout(false);
+            this.cmsRelatórios.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -139,5 +178,9 @@
         private System.Windows.Forms.ToolStripMenuItem veiculosToolStripMenuItem;
         private System.Windows.Forms.Button btnGaragem;
         private System.Windows.Forms.ContextMenuStrip cmsGaragem;
+        private System.Windows.Forms.Button btnRelatórios;
+        private System.Windows.Forms.ContextMenuStrip cmsRelatórios;
+        private System.Windows.Forms.ToolStripMenuItem abastecimentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viajensToolStripMenuItem;
     }
 }
